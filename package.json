@@ -1,0 +1,24 @@
+{
+  "name": "project-jr",
+  "version": "1.0.0",
+  "description": "",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Medrhz/prject-jr.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Medrhz/prject-jr/issues"
+  },
+  "homepage": "https://github.com/Medrhz/prject-jr#readme",
+  "dependencies": {
+    "express": "^5.2.1"
+  }
+}
