@@ -1,1 +1,1 @@
-print("hi irahim");
+print("hi irahim java script");
