@@ -54,12 +54,6 @@ app.get("/khanjar", (req, res) => {
 app.get("/kawtar", (req, res) => {
   res.json({ message: "i'm kawtar " });
 });
-<<<<<<< HEAD
-console.log("hi kawtar java script");
- 
-       
-   
-=======
 
 app.delete("/deleteStudent/:id", (req, res) => {
   const id = parseInt(req.params.id);
@@ -80,12 +74,11 @@ app.delete("/deleteStudent/:id", (req, res) => {
   });
 });
 
->>>>>>> b5cef0ab25c637ddac9bce5cda71b833e2e99aac
 app.listen(3000, () => {
   console.log("server is running");
 });
 app.get("/students", (req, res) => {
-  res.json(studnets);
+  res.json(students);
 });
 app.get("/students/:id", (req, res) => {
   const studentId = parseInt(req.params.id);
