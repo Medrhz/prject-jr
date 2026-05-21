@@ -55,6 +55,25 @@ app.get("/kawtar", (req, res) => {
   res.json({ message: "i'm kawtar " });
 });
 
+app.delete("/deleteStudent/:id", (req, res) => {
+  const id = parseInt(req.params.id);
+
+  const index = students.findIndex((student) => student.id === id);
+
+  if (index === -1) {
+    return res.status(404).json({
+      message: "Student not found",
+    });
+  }
+
+  students.splice(index, 1);
+
+  res.json({
+    message: "Student deleted successfully",
+    students,
+  });
+});
+
 app.listen(3000, () => {
   console.log("server is running");
 });
