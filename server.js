@@ -54,10 +54,44 @@ app.get("/khanjar", (req, res) => {
 app.get("/kawtar", (req, res) => {
   res.json({ message: "i'm kawtar " });
 });
+<<<<<<< HEAD
 console.log("hi kawtar java script");
  
        
    
+=======
+
+app.delete("/deleteStudent/:id", (req, res) => {
+  const id = parseInt(req.params.id);
+
+  const index = students.findIndex((student) => student.id === id);
+
+  if (index === -1) {
+    return res.status(404).json({
+      message: "Student not found",
+    });
+  }
+
+  students.splice(index, 1);
+
+  res.json({
+    message: "Student deleted successfully",
+    students,
+  });
+});
+
+>>>>>>> b5cef0ab25c637ddac9bce5cda71b833e2e99aac
 app.listen(3000, () => {
   console.log("server is running");
+});
+app.get("/students", (req, res) => {
+  res.json(studnets);
+});
+app.get("/students/:id", (req, res) => {
+  const studentId = parseInt(req.params.id);
+  const student = studnets.find((s) => s.id === studentId);
+  if (!student) {
+    return res.status(404).json({ message: "Student not found" });
+  }
+  res.json(student);
 });
