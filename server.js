@@ -89,3 +89,22 @@ app.get("/students/:id", (req, res) => {
   res.json(student);
 });
 console.log("hi github");
+app.post("/students",(req,res)=>{
+     const{fullName,age,adress,city,notes,gender} = req.body;
+     console.log(fullName,age,adress,city,notes,gender);
+     student={id:students.length+1,fullName:fullName,age:age,adress:adress,city:city,notes:notes,gender:gender}
+    students.push(student);
+    
+      if(student.id ==students.length){
+    responceDAta = {
+            succes :true,
+            data:student,
+            message : "data succes",
+            code : "SUCCES",
+            errors:[],
+
+      }
+      };
+      res.json(responceDAta);
+       
+    });
