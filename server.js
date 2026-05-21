@@ -88,3 +88,4 @@ app.get("/students/:id", (req, res) => {
   }
   res.json(student);
 });
+console.log("hi github");
