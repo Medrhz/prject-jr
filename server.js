@@ -54,7 +54,10 @@ app.get("/khanjar", (req, res) => {
 app.get("/kawtar", (req, res) => {
   res.json({ message: "i'm kawtar " });
 });
-
+console.log("hi kawtar java script");
+ 
+       
+   
 app.listen(3000, () => {
   console.log("server is running");
 });
