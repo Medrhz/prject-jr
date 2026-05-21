@@ -108,3 +108,5 @@ app.post("/students",(req,res)=>{
       res.json(responceDAta);
        
     });
+     app.get("/",(req,res)=> {
+    res.send("hello")});
