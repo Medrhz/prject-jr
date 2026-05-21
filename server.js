@@ -58,3 +58,14 @@ app.get("/kawtar", (req, res) => {
 app.listen(3000, () => {
   console.log("server is running");
 });
+app.get("/students", (req, res) => {
+  res.json(studnets);
+});
+app.get("/students/:id", (req, res) => {
+  const studentId = parseInt(req.params.id);
+  const student = studnets.find((s) => s.id === studentId);
+  if (!student) {
+    return res.status(404).json({ message: "Student not found" });
+  }
+  res.json(student);
+});
