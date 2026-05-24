@@ -110,3 +110,6 @@ app.post("/students",(req,res)=>{
     });
      app.get("/",(req,res)=> {
     res.send("hello")});
+    console.log("good by");
+      app.get("/test",(req,res)=> {
+    res.send("testing")});
